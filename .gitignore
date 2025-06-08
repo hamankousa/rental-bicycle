@@ -1,0 +1,20 @@
+﻿# Dependencies
+# 再生成可能で巨大なフォルダは無視する
+/node_modules
+/server/node_modules
+
+# Firebase Service Account Key
+# ★★★ 最も重要な設定 ★★★
+# すべての .json ファイルを無視する。これにより秘密鍵が絶対にアップロードされないようにする。
+*.json
+# ただし、必要なJSONファイルは例外的に許可する
+!/server/package.json
+!/server/package-lock.json
+!/demo/data/bikes.json
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE settings folder
+.vscode/

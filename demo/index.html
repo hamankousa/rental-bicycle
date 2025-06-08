@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keiteki Bike Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>レンチャリ 🚲</h1>
+    <div id="current-time" class="time-display">--:--:--</div>
+<div class="user-interface-container">
+    <!-- タブ切り替えボタン -->
+    <div class="tab-buttons">
+        <button id="tab-btn-search" class="tab-btn active">ユーザー検索</button>
+        <button id="tab-btn-register" class="tab-btn">新規登録</button>
+    </div>
+
+    <!-- タブのコンテンツエリア -->
+    <div class="tab-content-container">
+
+        <!-- 1. ユーザー検索タブ -->
+        <div id="tab-content-search" class="tab-content active">
+            <div class="filter-group">
+                <label>絞り込み検索</label>
+                <div id="search-filter-wing" class="button-group"></div>
+                <div id="search-filter-floor" class="button-group"></div>
+                <div id="search-filter-side" class="button-group"></div>
+            </div>
+            <div class="selector-group">
+                <label>利用者を選択</label>
+                <div id="resident-list" class="button-group">
+                    <p>上のボタンで絞り込んでください。</p>
+                </div>
+            </div>
+        </div>
+        <!-- 2. 新規登録タブ -->
+        <div id="tab-content-register" class="tab-content">
+            <div class="selector-group">
+                <label>棟</label>
+                <div id="reg-selector-wing" class="button-group"></div>
+            </div>
+            <div class="selector-group">
+                <label>階（縦フロアは2つ選択）</label>
+                <div id="reg-selector-floor" class="button-group"></div>
+            </div>
+            <div class="selector-group">
+                <label>側</label>
+                <div id="reg-selector-side" class="button-group"></div>
+            </div>
+            <div class="selector-group">
+                <label>名前（手入力）</label>
+                <input type="text" id="reg-name" placeholder="名前を入力 (例: 鈴木)">
+            </div>
+            <div class="terms-container">
+                <div class="terms-box">
+                    <p>【利用規約】</p>
+                    <ol>
+                        <li>あとでうめる</li>
+                    </ol>
+                </div>
+            </div>
+            <button id="register-btn" class="register-btn-main">利用規約に同意し、この内容で登録する</button>
+        </div>
+    </div>
+</div>
+
+    <div class="bike-grid" id="bike-grid">
+        <!-- ここに自転車のセルがJavaScriptによって動的に生成されます -->
+    </div>
+<hr class="admin-divider">
+
+<div class="admin-section">
+    <h2>管理者用メニュー</h2>
+
+    <div class="admin-controls">
+        <label for="admin-select-year">対象年:</label>
+        <select id="admin-select-year"></select>
+
+        <label for="admin-select-month">対象月:</label>
+        <select id="admin-select-month"></select>
+
+        <button id="admin-download-csv-btn">請求CSVダウンロード</button>
+    </div>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
