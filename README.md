@@ -2,9 +2,6 @@
 
 **月ごとのユーザー管理と、日またぎ対応の高度な料金計算機能を備えた、高機能なレンタル自転車管理システムのデモアプリケーションです。**
 
-**[🔗 デモページはこちら (GitHub Pages)](https://hamankousa.github.io/rental-bicycle/demo/)**
-*(※このURLは、GitHub Pagesの設定後に有効になります)*
-
 ---
 
 ## ✨ 主な機能 (Features)
