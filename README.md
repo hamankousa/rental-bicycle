@@ -51,7 +51,7 @@
 git clone https://github.com/hamankousa/rental-bicycle.git
 
 # 2. プロジェクトディレクトリに移動します
-cd [リポジトリ名]
+cd rental-bicycle
 
 # 3. バックエンドの依存関係をインストールします
 cd server
